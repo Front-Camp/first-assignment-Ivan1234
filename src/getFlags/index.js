@@ -6,7 +6,10 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
+  let newArr = arr.reduce(function (acc, val) {
+  	return acc.concat(val.flags);
+  }, []);
+  return newArr;
 };
 
 export default getFlags;
